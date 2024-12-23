@@ -1,5 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
 
+// Bool is a datatype in C#
+bool isRainy = false;
+bool hasUmbrella = true;
 
-Console.ReadKey();  
+// if statements require two ==
+if (!isRainy == false) {
+    Console.WriteLine( "I will be protected");
+}
+// Logical Operatorsq
+// &&
+// ||
+// Not !
+
+Console.ReadKey();
