@@ -133,4 +133,75 @@ switch (day)
         break;
 }
 
+
+// Random Number
+//Console.WriteLine("Guess a number");
+//int num1;
+//Random random = new Random();
+//int randomNumber = random.Next(1, 11);
+//Console.WriteLine(randomNumber);
+//string inputString = Console.ReadLine();
+
+//bool isNumber = int.TryParse(inputString, out num1);
+
+//if (isNumber)
+//{
+//    if (num1 == randomNumber)
+//    {
+//        Console.WriteLine("Congratulations you guessed correctly");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Unlucky, You didnt get it this time!");
+//    }
+//}
+// Using Try Parse
+
+
+//Console.WriteLine("Give me a number");
+//string inputString = Console.ReadLine();
+//int num1;
+
+//bool isNumber = int.TryParse(inputString, out num1);
+
+//num1++;
+//Console.WriteLine("User entered number +1 is " + num1);
+
+int int1 = 0;
+int int2 = 0;
+string operation;
+float result = 0;
+
+// First input number
+Console.WriteLine("Please enter a number");
+string inputString1 = Console.ReadLine();
+bool isNumber1 = int.TryParse(inputString1, out int1);
+
+// Second input number
+Console.WriteLine("Please enter another number");
+string inputString2 = Console.ReadLine();
+bool isNumber2 = int.TryParse(inputString2, out int2);
+
+// Choose operation
+Console.WriteLine("Do you want to do an Additon, Subtraction, Multiplication or a Division");
+operation = Console.ReadLine().Trim().ToLower();
+
+if (operation == "addition")
+{
+    result = int1 + int2;
+    
+} else if (operation == "subtraction")
+{
+    result = int1 - int2;
+} else if (operation == "multiplication")
+{
+    result = int1 * int2;
+} else if (operation == "division")
+{ if (int1 != 0 && int2 != 0)
+    { result = int1 / int2; }
+    else { Console.WriteLine("You cant divide by 0"); }
+}
+
+Console.WriteLine($"Result: {result}");
+
 Console.ReadKey();
